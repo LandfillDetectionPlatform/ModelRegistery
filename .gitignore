@@ -1,1 +1,5 @@
 venv/
+models/
+/imagery
+/mlartifacts
+/mlruns
