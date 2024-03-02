@@ -1,6 +1,6 @@
 outs:
-- md5: 61f1e20ede755c76711eac9aa33572f8.dir
-  size: 3821362
-  nfiles: 2
+- md5: 634e6e417aa73636199e7403b1e9f7ae.dir
+  size: 5721087
+  nfiles: 20
   hash: md5
   path: imagery

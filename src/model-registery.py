@@ -19,8 +19,7 @@ state_dict = torch.load(model_path, map_location=torch.device('cpu'))
 model.load_state_dict(state_dict)
 
 # Define example input tensor for schema
-example_input = torch.randn(1, 3, 224, 224)  # Adjust shape based on your model input
-
+example_input = torch.randn(1, 3, 224, 224)
 # Convert PyTorch tensor to NumPy array
 example_input_numpy = example_input.numpy()
 
