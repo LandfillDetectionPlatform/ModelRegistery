@@ -6,7 +6,8 @@ from steps.data_ingesting import load_data
 from steps import *
 @pipeline
 def image_classification_pipeline():
-    load_data_step = load_data(data_dir='C:/Users/Yassine/Documents/Spring 2024/LandfillDetection/LandfillDetection-mlops/imagery', inference=False)
+    transform = define_transformation()
+    load_data_step = load_data(transformation=transform,data_dir='C:/Users/Yassine/Documents/Spring 2024/LandfillDetection/LandfillDetection-mlops/imagery')
     initialize_model_step = initialize_model(model_url='C:/Users/Yassine/Documents/Spring 2024/LandfillDetection/LandfillDetection-mlops/models/illegal_landfills_model.pth')
     train_model_step = train_model_with_mlflow(loaders=load_data_step,num_epochs=1, learning_rate=0.001, step_size=7, gamma=0.1,model=initialize_model_step)
     evaluate_model_step = evaluate_model(loaders=load_data_step,model=train_model_step)

@@ -1,20 +1,18 @@
-# # main.py
-# from pipeline.image_classification_pipeline import landfill_classification_pipeline
-
-# if __name__ == "__main__":
-#     pipeline_instance = landfill_classification_pipeline()
-#     pipeline_instance.run()
-
-from steps import *
+import argparse
 from pipeline.training_pipeline import image_classification_pipeline
-from zenml.pipelines import pipeline
-import torch
-import torch.nn as nn
-from torchvision import  models
-from steps import *
-
-# Configure your steps here
-
+from pipeline.inference_pipeline import inference_pipeline
+from PIL import Image
 if __name__ == "__main__":
-    pipeline = image_classification_pipeline()
+    parser = argparse.ArgumentParser(description="Choose pipeline to run")
+    parser.add_argument('--pipeline', choices=['training', 'inference'], default='training',
+                        help="Choose the pipeline to run (training or inference)")
+    args = parser.parse_args()
+
+    if args.pipeline == 'training':
+        pipeline = image_classification_pipeline()
+    elif args.pipeline == 'inference':
+        pipeline = inference_pipeline()
+    else:
+        raise ValueError("Invalid pipeline choice. Choose 'training' or 'inference'.")
+
     pipeline.run()

@@ -4,3 +4,6 @@ from .model_loading import initialize_model
 from .model_logging import log_and_save
 from .model_promoter import model_promoter
 from .model_training import train_model_with_mlflow
+from .transformation import define_transformation
+from .infer import run_inference
+from .save_image import save_image_based_on_prediction
