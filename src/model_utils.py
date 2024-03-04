@@ -7,7 +7,7 @@ def load_model():
     model = models.resnet50(pretrained=False)
     num_classes = 2  # Legal and Illegal landfills
     model.fc = torch.nn.Linear(model.fc.in_features, num_classes)
-    state_dict = torch.load('../models/illegal_landfills_model.pth', map_location=torch.device('cpu'))
+    state_dict = torch.load('models/illegal_landfills_model.pth', map_location=torch.device('cpu'))
     model.load_state_dict(state_dict)
 
     model.eval()
