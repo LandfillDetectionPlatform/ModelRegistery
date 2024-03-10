@@ -14,11 +14,17 @@ import dvc
 import subprocess
 
 @step
-def train_model_with_mlflow(loaders: dict, num_epochs: int, learning_rate: float, step_size: int, gamma: float ,model: torch.nn.Module) -> torch.nn.Module:
+def train_model_with_mlflow(loaders: dict, num_epochs: int, learning_rate: float, step_size: int, gamma: float ,model: torch.nn.Module) -> dict:
     
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     scheduler = StepLR(optimizer, step_size=step_size, gamma=gamma)
+    hyperparameters = {
+        'num_epochs': num_epochs,
+        'learning_rate': learning_rate,
+        'step_size': step_size,
+        'gamma': gamma,
+    }
 
     train_loader = loaders['train_loader']
     device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -40,4 +46,7 @@ def train_model_with_mlflow(loaders: dict, num_epochs: int, learning_rate: float
         scheduler.step()
 
 
-    return model
+    return {
+        'model': model,
+        'hyperparameters': hyperparameters
+    }

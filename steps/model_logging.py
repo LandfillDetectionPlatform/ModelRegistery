@@ -18,9 +18,9 @@ import dvc
 import subprocess
 
 @step(enable_cache=False)
-def log_and_save(model_container: torch.nn.Module, metrics: dict, promotion_decision: bool, model_path: str):
+def log_and_save(model: dict, metrics: dict, promotion_decision: bool, model_path: str):
     mlflow.log_metrics(metrics)
-
+    model_container = model["model"]
     if promotion_decision:
         if not os.path.exists(model_path):
             os.makedirs(model_path)
