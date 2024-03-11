@@ -9,6 +9,8 @@ COPY requirements.txt requirements.txt
 COPY pipeline/training_pipeline.py pipeline/training_pipeline.py
 COPY run_pipeline.py run_pipeline.py
 
+# If your training pipeline has additional dependencies or files, copy them here
+
 # Install the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
