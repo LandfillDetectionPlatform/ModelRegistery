@@ -13,6 +13,6 @@ if __name__ == "__main__":
     elif args.pipeline == 'inference':
         pipeline = inference_pipeline()
     else:
-        raise ValueError("Invalid pipeline choice. Choose 'training' or 'inference'.")
+        raise ValueError("InValid pipeline choice. Choose 'training' or 'inference'.")
 
     pipeline.run()
