@@ -4,7 +4,7 @@ FROM python:3.8-slim
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the necessary files into the container
+# Copy the necessary files into the containeré
 COPY requirements.txt .
 COPY pipeline/inference_pipeline.py ./pipeline/
 COPY run_pipeline.py .
