@@ -1,14 +1,11 @@
-# Define a function to clean each line from unwanted characters
-def clean_line(line):
-    # Strip the line of whitespace and split by '==' to get the package name
-    # Also remove any unusual characters by encoding to a limited character set and decoding it back
-    return line.strip().split('==')[0].encode('ascii', 'ignore').decode()
+# Open the requirements.txt file in read mode
+with open("requirements.txt") as myFile:
+    # Read the file's content
+    pkgs = myFile.read()
+    # Split the content into lines
+    pkgs = pkgs.splitlines()
 
-# Read the original file, clean each line, and collect cleaned package names
-with open("requirements.txt", "r", encoding="utf-8") as readFile:
-    packages_without_versions = [clean_line(pkg) for pkg in readFile.read().splitlines()]
-
-# Write the cleaned package names back to the file
-with open("rquirements_clean.txt", "w", encoding="utf-8") as writeFile:
-    for pkg in packages_without_versions:
-        writeFile.write(f"{pkg}\n")
+    # Iterate over each line
+    for pkg in pkgs:
+        # Split the package name from its version and print the package name
+        print(pkg.split('==')[0])
