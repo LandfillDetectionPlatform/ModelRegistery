@@ -9,6 +9,6 @@ with open("requirements.txt", "r", encoding="utf-8") as readFile:
     packages_without_versions = [clean_line(pkg) for pkg in readFile.read().splitlines()]
 
 # Write the cleaned package names back to the file
-with open("requirements_clean.txt", "w", encoding="utf-8") as writeFile:
+with open("rquirements_clean.txt", "w", encoding="utf-8") as writeFile:
     for pkg in packages_without_versions:
         writeFile.write(f"{pkg}\n")
