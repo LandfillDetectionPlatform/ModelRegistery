@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sodium-daylight-411413",
+  "private_key_id": "150d24d454fc027bb0dd6aac239e610062c1742c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDsB8Qi0/FKBnWX\n6kTf85xSNmjyaU0B4E0JMdfiNVgupVSm8dh+Tjk+4pDICvY7b0FAr4auyf5QzUJ+\nMSEGfr7aYieGEqW477Rs97C558UISLXn9b/DT34qDMHc10mbPYN8ngtyEAAN6rhO\nhJSbN+TTsvA9Dmyw48WXuDqJRcwJqSCs8IPhAAqgfrXIINzyDynlAaDwHDK524BQ\nsaCacCpNKsv6gVn1wen7EDXext5hCigwQVNnX4Rq5xT1JrENLzT1Aj4JMePXu/7I\nVNAug+0t65d4zRfYI4IC8YW55Eodw1PoguceEBri0kwQrmxucqtSQa2mEmcuqnFY\nnkmwr9EhAgMBAAECggEAEhYuQ3T2QnPoQvHiwT6LtgkRVbIYApLLlG7LWjw4O6rT\np89Uhak83cLC0XF1mOxXlbtdmLtFz69K7xyYqUTBHz7yRGXdaSSFMOxyEGzgPlhE\nCDher3rB8jr0CBY/P7QhBUWfHuh2+JoJ8YpbUOGhmU9W9XbLgWqS06N8aNR+ZCb5\n+m5A7JKT+apzKr0mFe7GQeSJ8y/QKYQLEr/cV3Cmls70WSLo/ggtr9TUPSoSYJ/u\n8Yw/1EvZUL9mrNXzKYVGj6VY3JLoI27MRM/aZzprW+QvxXPnZ/LyglRCjbMSvmlC\n0806iPb2WxAQdG5jjoQWDVF6Lu96DJ0F2NHC6TrTeQKBgQD54HWG0NQfOYws4dk4\nJ4nhlILb/oFsHujEOagzoz/eviQWBgCBS1y/eouQx6vmp3a2MiSIXwqTKQCwDSiO\nJBsr1woQhZ/6GqszzVh657HDkSsY8aML9DimpJuyeNNYs0Yth0/7jTRYfGwKlE7r\n5zdRpkRbPuKVNg6hTOwZzYhKlwKBgQDx0HHYhb82Hr5/QWiIMIe4ORuUH36rn1JV\nytTddCFopHWTL13476mW+lLjljkRE0cA9HfeEdRmxuj47XdbUQvgFeuCi6LM+I63\n1VwA6F87vmtHsk5mOgxgJWg7waVcl9tkT91DikHY7hNKvPedO4AJXU6aQf3qb1PP\nv3TTeARRBwKBgAHs6drtFwVakyrxXpQhMd3MICoDzwl/P3nrm9EyC9byjiKhTzWv\n1/odvp+R+lAfsDl9L2zhlppFsZyprUtTGeZ/lLNF5FKwC+utRGZGDMeeAcACdKgt\n7JXUJOL+LVq8nujQ5xvgHawk4Uw/klAdCv8VEefGF0bhEMHLbvJP9CHnAoGAETOY\nxaROA9WQC5FllDqPjQVS9uh+pErDGqNBHTfDoKQCUSQPdUPnNnw8JUBsctCCPokl\ndcCi8WS48exCj1Zml9w3UqQIQrhzvpQI5W+iRqe3DfSbKx55/uTqU0XlM38B9lLQ\nFJvjL0FQUgK7Qo4W/5OJoeOL4n9k4ORntRtWg0UCgYEAyxNQtRElTrfIAluXnxlg\nLDVWBmEOUaCcsuHIOQIOxHfEMlasGEhxlD/BB8bXtL/iCQ/O9lYSoI55GgTH7Xxr\npJfIIgvLevsGzMpuyXiMmOh8Lm1iG8Ewfir9u4TVUo+qc0tXy5MIlwkf359AycFp\ns9/frHMcT1onf6xdoE79CxY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "data-dvc@sodium-daylight-411413.iam.gserviceaccount.com",
+  "client_id": "117894656543498690866",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/data-dvc%40sodium-daylight-411413.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
