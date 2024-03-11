@@ -21,4 +21,4 @@ steps:
 
 - name: Run ZenML Pipeline
   run: |
-    python your_script.py --pipeline $PIPELINE
+    python run_pipeline.py --pipeline inference
