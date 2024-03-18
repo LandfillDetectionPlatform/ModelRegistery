@@ -1,8 +1,0 @@
-[core]
-    remote = storage
-['remote "myremote"']
-    url = ../1dbU51GbcixId8BfgPMSG9q-nLO_qZElt
-['remote "remote"']
-    url = gs://1dbU51GbcixId8BfgPMSG9q-nLO_qZElt
-['remote "storage"']
-    url = gdrive://1dbU51GbcixId8BfgPMSG9q-nLO_qZElt

@@ -49,22 +49,11 @@ def evaluate_model(model_data: dict, loaders: dict) -> dict:
     accuracy = accuracy_score(all_labels, all_preds)
     f1 = f1_score(all_labels, all_preds, average='binary', zero_division=1)
     
-    # Log metrics
-    mlflow.log_metric("precision", precision)
-    mlflow.log_metric("recall", recall)
-    mlflow.log_metric("accuracy", accuracy)
-    mlflow.log_metric("f1_score", f1)
-
-    # Log model parameters and hyperparameters
-    for param, value in model_params.items():
-        mlflow.log_param(param, value)
-
-    # Optionally, log model architecture
-    # mlflow.log_text(str(model), "model_architecture.txt")
     
     return {
         "precision": precision,
         "recall": recall,
         "accuracy": accuracy,
-        "f1_score": f1
+        "f1_score": f1,
+        # "model_params": model_params
     }

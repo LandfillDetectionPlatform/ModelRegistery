@@ -4,15 +4,15 @@ FROM python:3.8-slim
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the necessary files into the container
-COPY requirements.txt requirements.txt
-COPY pipeline/training_pipeline.py pipeline/training_pipeline.py
-COPY run_pipeline.py run_pipeline.py
-
-# If your training pipeline has additional dependencies or files, copy them here
+# Copy the necessary files and directories into the container
+COPY requirements.txt .
+COPY pipeline/ ./pipeline/
+COPY steps/ ./steps/
+COPY imagery/ ./imagery/
+COPY run_pipeline.py .
 
 # Install the Python dependencies
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 # Command to run the training pipeline
 CMD ["python", "run_pipeline.py", "--pipeline", "training"]

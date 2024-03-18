@@ -14,7 +14,7 @@ def model_promoter(metrics: dict, precision_threshold: float, recall_threshold: 
 
     is_promoted = False
 
-    if precision >= precision_threshold and recall >= recall_threshold:
+    if precision <= precision_threshold and recall <= recall_threshold:
         logger.info(
             f"Model precision {precision*100:.2f}% and Model recall {recall*100:.2f} %is are bellow 80% ! Not promoting model."
         )

@@ -1,5 +1,5 @@
 import argparse
-from pipeline.training_pipeline import image_classification_pipeline
+from pipeline.training_pipeline import training_pipeline
 from pipeline.inference_pipeline import inference_pipeline
 from PIL import Image
 if __name__ == "__main__":
@@ -9,7 +9,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.pipeline == 'training':
-        pipeline = image_classification_pipeline()
+        pipeline = training_pipeline()
     elif args.pipeline == 'inference':
         pipeline = inference_pipeline()
     else:
