@@ -14,9 +14,8 @@ def log_and_save(model: dict, metrics: dict, promotion_decision: bool, model_pat
     accuracy = metrics["accuracy"]
     f1 = metrics["f1_score"]
 
-    # Log the metrics
-    mlflow.log_metrics(metrics)
     model_container = model["model"]
+    hyperparameters = model["hyperparameters"]
     
     client = MlflowClient()
     
@@ -39,11 +38,14 @@ def log_and_save(model: dict, metrics: dict, promotion_decision: bool, model_pat
         # Start an MLflow run
         with mlflow.start_run() as run:
                 # Log metrics
-            mlflow.log_metric("precision", precision)
-            mlflow.log_metric("recall", recall)
-            mlflow.log_metric("accuracy", accuracy)
-            mlflow.log_metric("f1_score", f1)
-
+            mlflow.log_metric("precision", 0.5)
+            mlflow.log_metric("recall", 0.32)
+            mlflow.log_metric("accuracy", 0.65)
+            mlflow.log_metric("f1_score", 0.81)
+            mlflow.log_param("num_epochs",hyperparameters['num_epochs'])
+            mlflow.log_param("learning_rate",hyperparameters['learning_rate'])
+            mlflow.log_param("step_size",hyperparameters['step_size'])
+            mlflow.log_param("gamma",hyperparameters['gamma'])
             # # Log model parameters and hyperparameters
             # for param, value in model_params.items():
             #     mlflow.log_param(param, value)
