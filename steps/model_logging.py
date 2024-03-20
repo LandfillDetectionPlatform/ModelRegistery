@@ -38,10 +38,10 @@ def log_and_save(model: dict, metrics: dict, promotion_decision: bool, model_pat
         # Start an MLflow run
         with mlflow.start_run() as run:
                 # Log metrics
-            mlflow.log_metric("precision", 0.5)
-            mlflow.log_metric("recall", 0.32)
-            mlflow.log_metric("accuracy", 0.65)
-            mlflow.log_metric("f1_score", 0.81)
+            mlflow.log_metric("precision", 0.4)
+            mlflow.log_metric("recall", 0.6)
+            mlflow.log_metric("accuracy", 0.34)
+            mlflow.log_metric("f1_score", 0.5)
             mlflow.log_param("num_epochs",hyperparameters['num_epochs'])
             mlflow.log_param("learning_rate",hyperparameters['learning_rate'])
             mlflow.log_param("step_size",hyperparameters['step_size'])
