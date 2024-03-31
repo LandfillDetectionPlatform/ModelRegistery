@@ -26,14 +26,14 @@ example_input_numpy = example_input.numpy()
 # Start an MLflow run
 with mlflow.start_run() as run:
     # Log model without automatic signature inference
-    mlflow.pytorch.log_model(model, "model", registered_model_name="ResNet50", input_example=example_input_numpy, signature=False)
+    mlflow.pytorch.log_model(model, "model", registered_model_name="Resnet50", input_example=example_input_numpy, signature=False)
 
     # Register the model in the model registry
     mlflow.register_model(f"runs:/{run.info.run_id}/model", "ResNet50")
 
     # Log additional information
     mlflow.log_param("description", "ResNet-50 model for image classification of landfills")
-    mlflow.log_param("epochs", 11)
+    mlflow.log_param("epochs", 200)
     mlflow.log_param("frozen_layers", "All layers frozen except the last one")
     mlflow.log_param("dataset", "Aerial waste dataset")
 
